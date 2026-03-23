@@ -29,25 +29,26 @@ const marqueeItems2 = [
 
 export default function Page() {
   return (
-    <main>
-      <RevealInit />
-      <Hero />
-      <MarqueeStrip items={marqueeItems1} />
-      <SocialProof1 />
-      <Metodo />
-      <MarqueeStrip items={marqueeItems2} dark reverse />
-      <ComoFunciona />
-      <SocialProof2 />
-      <Beneficios />
-      <Entrega />
-      <Bonus />
-      <Comparacao />
-      <Stack />
-      <Planos />
-      <Garantia />
-      <Faq />
-      <CtaFinal />
-      <Footer />
-    </main>
+    <RevealInit>
+      <main>
+        <Hero />
+        <MarqueeStrip items={marqueeItems1} />
+        <SocialProof1 />
+        <Metodo />
+        <MarqueeStrip items={marqueeItems2} dark reverse />
+        <ComoFunciona />
+        <SocialProof2 />
+        <Beneficios />
+        <Entrega />
+        <Bonus />
+        <Comparacao />
+        <Stack />
+        <Planos />
+        <Garantia />
+        <Faq />
+        <CtaFinal />
+        <Footer />
+      </main>
+    </RevealInit>
   )
 }
