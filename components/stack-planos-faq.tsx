@@ -140,8 +140,8 @@ export function Stack() {
               <div className="mt-6">
                 <a
                   href="#planos"
-                  className="inline-flex items-center gap-3 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-                  style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--g)', boxShadow: '0 8px 40px rgba(28,135,60,0.35)' }}
+                  className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
+                  style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--o)', color: '#000', boxShadow: '0 8px 40px rgba(245,113,0,0.35)' }}
                 >
                   Garantir meu acesso
                   <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
