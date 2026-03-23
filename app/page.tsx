@@ -3,7 +3,7 @@
 import { useReveal } from '@/hooks/use-reveal'
 import { Hero } from '@/components/hero'
 import { MarqueeStrip } from '@/components/marquee-strip'
-import { SocialProof1, SocialProof2 } from '@/components/testimonials'
+import { SocialProof1, SocialProof2 } from '@/components/gallery'
 import { Metodo } from '@/components/metodo'
 import { ComoFunciona } from '@/components/como-funciona'
 import { Beneficios, Entrega, Bonus, Comparacao } from '@/components/beneficios-entrega'
