@@ -1,56 +1,40 @@
 'use client'
 
-// Aspect ratios (width / height) measured from the actual images.
-// Portrait phone screenshots ≈ 0.46. Landscape chat ≈ 1.33.
-type Img = { src: string; alt: string; ratio: number }
+type Img = { src: string; alt: string }
 
 const imgs1: Img[] = [
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-7-GkyR4FRazkbfKWnmvfI9BQb7dc0YE3.jpg',  alt: 'Antes e depois barriga',      ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-13-zkDyjT9kYA8LAHwkqDoKV5gPcmQqhD.jpg', alt: 'Calça que voltou a servir',  ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-10-EjMDxGsWDkEgJ4zzEPKM2t45fifW86.jpg', alt: 'Fernanda Moreira',           ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-14-lQF0W9oLkXYCSioRuebx2ePbURW2b3.jpg', alt: 'Sabrina e Keila',           ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-9-LyLxLxTKytYniCWnvEl9BAh4Qaggwu.jpg',  alt: 'Vitória Barros -7kg',      ratio: 0.46 },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-7-GkyR4FRazkbfKWnmvfI9BQb7dc0YE3.jpg',  alt: 'Antes e depois barriga' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-13-zkDyjT9kYA8LAHwkqDoKV5gPcmQqhD.jpg', alt: 'Calça que voltou a servir' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-10-EjMDxGsWDkEgJ4zzEPKM2t45fifW86.jpg', alt: 'Fernanda Moreira' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-14-lQF0W9oLkXYCSioRuebx2ePbURW2b3.jpg', alt: 'Sabrina e Keila' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-9-LyLxLxTKytYniCWnvEl9BAh4Qaggwu.jpg',  alt: 'Vitória Barros -7kg' },
 ]
 
 const imgs2: Img[] = [
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-11-Kz1FIVnL3Smro58Nqp7nG1IIccWweF.png', alt: 'Gabriela Silva',           ratio: 1.33 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-15-aGawae8BNBorC6HhWzj1c9Hs739Ap5.jpg', alt: 'Monalisa MUSA',            ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-12-u0hA4ydLEJvg5rbadHN8hWrWBgPgAt.jpg', alt: 'Daisy Nunes',             ratio: 0.46 },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-2-k3QVOnjOueigUf3fl8PrCSVbb5y7e8.jpg',  alt: 'Cibele Almeida',          ratio: 0.46 },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-11-Kz1FIVnL3Smro58Nqp7nG1IIccWweF.png', alt: 'Gabriela Silva' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-15-aGawae8BNBorC6HhWzj1c9Hs739Ap5.jpg', alt: 'Monalisa MUSA' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-12-u0hA4ydLEJvg5rbadHN8hWrWBgPgAt.jpg', alt: 'Daisy Nunes' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-2-k3QVOnjOueigUf3fl8PrCSVbb5y7e8.jpg',  alt: 'Cibele Almeida' },
 ]
 
-// Row definitions: which images go together per row
-const rows1: Img[][] = [
-  [imgs1[0], imgs1[1], imgs1[2]],
-  [imgs1[3], imgs1[4]],
-]
-
-const rows2: Img[][] = [
-  [imgs2[0], imgs2[1]],
-  [imgs2[2], imgs2[3]],
-]
-
-/**
- * Justified row — images share the row proportionally by their aspect ratios.
- * Each image gets flex: ratio, so its width = (ratio / totalRatio) × containerWidth.
- * The row height is determined by the tallest image (most portrait), ensuring nothing is cropped.
- * We use a hidden "spacer" img inside each cell to drive the intrinsic height.
- */
-function JustifiedRow({ row, dark }: { row: Img[]; dark?: boolean }) {
+function MasonryGallery({ imgs, dark }: { imgs: Img[]; dark?: boolean }) {
   return (
-    <div className="flex w-full" style={{ gap: 8, alignItems: 'flex-start' }}>
-      {row.map((img, i) => (
+    <div
+      style={{
+        columnCount: 3,
+        columnGap: 10,
+      }}
+      className="[column-count:1] sm:[column-count:2] lg:[column-count:3]"
+    >
+      {imgs.map((img, i) => (
         <div
           key={i}
-          className="reveal overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5"
+          className="reveal break-inside-avoid mb-2.5 overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5"
           style={{
-            flex: `${img.ratio} 1 0`,
-            minWidth: 0,
             boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.35)' : '0 4px 20px rgba(0,0,0,0.12)',
             border: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.05)',
           }}
         >
-          {/* Natural-ratio image — no crop, no fixed height */}
           <img
             src={img.src}
             alt={img.alt}
@@ -58,16 +42,6 @@ function JustifiedRow({ row, dark }: { row: Img[]; dark?: boolean }) {
             className="block w-full h-auto"
           />
         </div>
-      ))}
-    </div>
-  )
-}
-
-function Gallery({ rows, dark }: { rows: Img[][]; dark?: boolean }) {
-  return (
-    <div className="flex flex-col" style={{ gap: 8 }}>
-      {rows.map((row, i) => (
-        <JustifiedRow key={i} row={row} dark={dark} />
       ))}
     </div>
   )
@@ -136,7 +110,7 @@ export function SocialProof1() {
           </p>
         </div>
 
-        <Gallery rows={rows1} />
+        <MasonryGallery imgs={imgs1} />
         <CtaBtn label="Quero esses resultados" />
       </div>
     </section>
@@ -182,7 +156,7 @@ export function SocialProof2() {
           </p>
         </div>
 
-        <Gallery rows={rows2} dark />
+        <MasonryGallery imgs={imgs2} dark />
         <CtaBtn label="Quero fazer parte da Comunidade" green />
       </div>
     </section>

@@ -1,6 +1,4 @@
-'use client'
-
-import { useReveal } from '@/hooks/use-reveal'
+import { RevealInit } from '@/components/reveal-init'
 import { Hero } from '@/components/hero'
 import { MarqueeStrip } from '@/components/marquee-strip'
 import { SocialProof1, SocialProof2 } from '@/components/gallery'
@@ -30,10 +28,9 @@ const marqueeItems2 = [
 ]
 
 export default function Page() {
-  useReveal()
-
   return (
     <main>
+      <RevealInit />
       <Hero />
       <MarqueeStrip items={marqueeItems1} />
       <SocialProof1 />
