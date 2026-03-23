@@ -141,7 +141,7 @@ export function Stack() {
                 <a
                   href="#planos"
                   className="inline-flex items-center gap-3 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-                  style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--o)', boxShadow: '0 8px 40px rgba(245,113,0,0.35)' }}
+                  style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--g)', boxShadow: '0 8px 40px rgba(28,135,60,0.35)' }}
                 >
                   Garantir meu acesso
                   <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
@@ -481,8 +481,14 @@ export function CtaFinal() {
 
 export function Footer() {
   return (
-    <footer className="py-7 text-center" style={{ background: 'var(--gd)' }}>
-      <div className="max-w-[1080px] mx-auto px-5 sm:px-8">
+    <footer className="py-8 text-center" style={{ background: 'var(--gd)' }}>
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-8 flex flex-col items-center gap-4">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%20165%20%282%29-RoDBA8TV1oNG9u024AV9Gt19c7dub6.png"
+          alt="Comunidade Corpo Feliz"
+          className="h-10 w-auto object-contain opacity-60"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', lineHeight: 1.8 }}>
           © Corpo Feliz · Laura Rosa · Todos os direitos reservados<br />
           Os resultados podem variar de pessoa para pessoa. Exercício e alimentação adequada são necessários para a perda de peso. Consulte seu médico antes de iniciar qualquer programa de exercícios.

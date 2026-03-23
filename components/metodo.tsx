@@ -213,32 +213,35 @@ export function Metodo() {
                 Do iniciante ao avançado.<br />Começa onde está.
               </h3>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {trilhas.map((t, i) => (
                 <div
                   key={i}
-                  className={`reveal ${i > 0 ? `reveal-d${i}` : ''} rounded-[18px] p-6 transition-all duration-300 hover:-translate-y-1`}
+                  className={`reveal ${i > 0 ? `reveal-d${i}` : ''} rounded-[18px] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 flex sm:block gap-4 items-start`}
                   style={{
                     background: 'rgba(255,255,255,0.05)',
                     border: '1px solid rgba(255,255,255,0.09)',
                   }}
                 >
                   <div
+                    className="shrink-0 w-10 sm:w-auto"
                     style={{
                       fontFamily: 'var(--font-display)',
-                      fontSize: 48,
+                      fontSize: 'clamp(36px,5vw,48px)',
                       fontWeight: 800,
                       color: 'rgba(255,255,255,0.1)',
                       letterSpacing: '-0.04em',
-                      marginBottom: 14,
                       lineHeight: 1,
+                      marginBottom: 0,
                     }}
                   >
                     {t.n}
                   </div>
-                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--o)', marginBottom: 8 }}>{t.nivel}</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.nome}</div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.55 }}>{t.desc}</div>
+                  <div className="sm:mt-3.5">
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--o)', marginBottom: 6 }}>{t.nivel}</div>
+                    <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.nome}</div>
+                    <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.55 }}>{t.desc}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -254,8 +257,8 @@ export function Metodo() {
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(15px,1.5vw,18px)',
             padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
-            background: 'var(--o)',
-            boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
+            background: 'var(--g)',
+            boxShadow: '0 8px 40px rgba(28,135,60,0.35)',
           }}
         >
           Quero treinar com o meu ciclo

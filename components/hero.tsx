@@ -36,12 +36,12 @@ export function Hero() {
       <div className="relative z-10 w-full max-w-[1080px] mx-auto px-5 sm:px-8 pt-24 sm:pt-28 lg:pt-32">
         {/* Logo */}
         <div className="reveal mb-10 sm:mb-12">
-          <div
-            className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-xl"
-            style={{ background: 'var(--o)', fontFamily: 'var(--font-display)' }}
-          >
-            CF
-          </div>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%20165%20%282%29-RoDBA8TV1oNG9u024AV9Gt19c7dub6.png"
+            alt="Comunidade Corpo Feliz"
+            className="h-14 sm:h-16 w-auto object-contain"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </div>
 
         <h1
@@ -70,7 +70,7 @@ export function Hero() {
         </h1>
 
         <p
-          className="reveal reveal-d2 mb-10"
+          className="reveal reveal-d2 mb-6 sm:mb-10"
           style={{
             fontSize: 'clamp(15px,2vw,18px)',
             lineHeight: 1.75,
@@ -82,6 +82,48 @@ export function Hero() {
           Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.
         </p>
 
+        {/* VSL — visível SOMENTE no mobile acima do botão */}
+        <div className="reveal reveal-d3 mb-6 sm:hidden w-full">
+          <div
+            className="relative rounded-2xl overflow-hidden"
+            style={{
+              background: 'rgba(0,0,0,0.5)',
+              aspectRatio: '16/9',
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
+            }}
+          >
+            {!vslPlayed && (
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center gap-3 cursor-pointer"
+                style={{ background: 'rgba(0,72,17,0.85)' }}
+                onClick={() => setVslPlayed(true)}
+              >
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center"
+                  style={{ background: 'var(--o)', boxShadow: '0 0 0 12px rgba(245,113,0,0.18)' }}
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <span className="text-xs font-bold tracking-widest" style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-display)' }}>
+                  Assistir ao vídeo
+                </span>
+              </div>
+            )}
+            {vslPlayed && (
+              <iframe
+                className="absolute inset-0 w-full h-full border-0"
+                src="about:blank"
+                title="Corpo Feliz — Laura Rosa"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            )}
+          </div>
+        </div>
+
         <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10">
           <a
             href="#planos"
@@ -90,8 +132,8 @@ export function Hero() {
               fontFamily: 'var(--font-display)',
               fontSize: 'clamp(15px,1.5vw,18px)',
               padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
-              background: 'var(--o)',
-              boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
+              background: 'var(--g)',
+              boxShadow: '0 8px 40px rgba(28,135,60,0.35)',
             }}
           >
             Quero entrar para as Musas
@@ -99,8 +141,8 @@ export function Hero() {
           </a>
         </div>
 
-        {/* VSL */}
-        <div className="reveal reveal-d3 mb-16 w-full">
+        {/* VSL — visível em tablet e desktop (abaixo do botão) */}
+        <div className="reveal reveal-d3 mb-16 w-full hidden sm:block">
           <div
             className="relative rounded-3xl overflow-hidden"
             style={{
