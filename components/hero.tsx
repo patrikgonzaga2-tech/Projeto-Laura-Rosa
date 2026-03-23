@@ -56,9 +56,12 @@ export function Hero() {
             letterSpacing: '-0.03em',
           }}
         >
-          Emagreça de<br />
+          <span className="hidden sm:inline">Emagreça de<br />
           verdade. Sem lutar<br />
-          contra{' '}
+          contra{' '}</span>
+          <span className="sm:hidden">Emagreça de<br />
+          verdade.<br />
+          Sem lutar contra<br /></span>
           <em
             className="not-italic relative inline-block"
             style={{ color: 'var(--o)' }}

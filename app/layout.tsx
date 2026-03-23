@@ -46,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${bricolage.variable} ${dmSans.variable}`}>
-      <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-body, DM Sans, sans-serif)' }}>
+    <html lang="pt-BR" className={`${bricolage.variable} ${dmSans.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-body, DM Sans, sans-serif)' }} suppressHydrationWarning>
         {children}
         <Analytics />
       </body>
