@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useReveal } from '@/hooks/use-reveal'
 
 export function Hero() {
+  useReveal()
   const [vslPlayed, setVslPlayed] = useState(false)
 
   return (

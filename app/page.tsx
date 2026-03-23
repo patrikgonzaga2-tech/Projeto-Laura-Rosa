@@ -1,4 +1,3 @@
-import { RevealInit } from '@/components/reveal-init'
 import { Hero } from '@/components/hero'
 import { MarqueeStrip } from '@/components/marquee-strip'
 import { SocialProof1, SocialProof2 } from '@/components/gallery'
@@ -29,26 +28,24 @@ const marqueeItems2 = [
 
 export default function Page() {
   return (
-    <RevealInit>
-      <main>
-        <Hero />
-        <MarqueeStrip items={marqueeItems1} />
-        <SocialProof1 />
-        <Metodo />
-        <MarqueeStrip items={marqueeItems2} dark reverse />
-        <ComoFunciona />
-        <SocialProof2 />
-        <Beneficios />
-        <Entrega />
-        <Bonus />
-        <Comparacao />
-        <Stack />
-        <Planos />
-        <Garantia />
-        <Faq />
-        <CtaFinal />
-        <Footer />
-      </main>
-    </RevealInit>
+    <main>
+      <Hero />
+      <MarqueeStrip items={marqueeItems1} />
+      <SocialProof1 />
+      <Metodo />
+      <MarqueeStrip items={marqueeItems2} dark reverse />
+      <ComoFunciona />
+      <SocialProof2 />
+      <Beneficios />
+      <Entrega />
+      <Bonus />
+      <Comparacao />
+      <Stack />
+      <Planos />
+      <Garantia />
+      <Faq />
+      <CtaFinal />
+      <Footer />
+    </main>
   )
 }
