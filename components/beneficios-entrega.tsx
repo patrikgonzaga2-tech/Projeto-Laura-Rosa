@@ -152,8 +152,8 @@ export function Beneficios() {
             <div className="reveal mt-8">
               <a
                 href="#planos"
-                className="inline-flex items-center gap-3 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
-                style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--gd)', boxShadow: '0 8px 32px rgba(0,72,17,0.3)' }}
+                className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--gd)', color: 'white', boxShadow: '0 8px 32px rgba(0,72,17,0.3)' }}
               >
                 Quero essa transformação
                 <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
