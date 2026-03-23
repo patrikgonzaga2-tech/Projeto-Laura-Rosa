@@ -386,6 +386,8 @@ export function Bonus() {
   )
 }
 
+const competitors = ['Corpo Feliz', 'Academia', 'Outros Apps', 'Personal', 'Grátis']
+
 export function Comparacao() {
   return (
     <section className="py-20 sm:py-24 lg:py-28" style={{ background: 'var(--pale)' }}>
@@ -402,7 +404,9 @@ export function Comparacao() {
           Por que o Corpo Feliz entrega<br />
           o que outros <span style={{ color: 'var(--o)' }}>não conseguem.</span>
         </h2>
-        <div className="reveal overflow-x-auto rounded-3xl" style={{ boxShadow: '0 4px 48px rgba(0,0,0,0.08)' }}>
+
+        {/* Desktop: tabela tradicional */}
+        <div className="reveal hidden sm:block overflow-x-auto rounded-3xl" style={{ boxShadow: '0 4px 48px rgba(0,0,0,0.08)' }}>
           <table className="w-full min-w-[640px] border-collapse bg-white">
             <thead>
               <tr>
@@ -436,6 +440,69 @@ export function Comparacao() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile: cards por recurso */}
+        <div className="reveal sm:hidden flex flex-col gap-3">
+          {[...tableRows, { feature: 'Investimento mensal', cf: '$' as const, academia: '$$' as const, apps: '$' as const, personal: '$$$' as const, gratis: 'Grátis' as const }].map((row, i) => {
+            const vals = [row.cf, row.academia, row.apps, row.personal, row.gratis]
+            return (
+              <div
+                key={i}
+                className="rounded-2xl overflow-hidden"
+                style={{ background: '#fff', boxShadow: '0 2px 16px rgba(0,0,0,0.07)' }}
+              >
+                {/* Feature header */}
+                <div
+                  className="px-4 py-3"
+                  style={{ background: 'var(--gd)', color: 'white', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 700 }}
+                >
+                  {row.feature}
+                </div>
+                {/* Competitor rows */}
+                <div className="divide-y" style={{ borderColor: '#f0f0f0' }}>
+                  {competitors.map((name, ci) => {
+                    const isCF = ci === 0
+                    const val = vals[ci]
+                    return (
+                      <div
+                        key={ci}
+                        className="flex items-center justify-between px-4 py-2.5"
+                        style={{ background: isCF ? 'rgba(0,72,17,0.05)' : 'transparent' }}
+                      >
+                        <span
+                          className="text-sm"
+                          style={{
+                            fontWeight: isCF ? 700 : 500,
+                            color: isCF ? 'var(--gd)' : 'var(--sub)',
+                          }}
+                        >
+                          {name}
+                        </span>
+                        <span>
+                          {typeof val === 'boolean' ? (
+                            val
+                              ? <span className="text-base font-bold" style={{ color: 'var(--g)' }}>✓</span>
+                              : <span className="text-base" style={{ color: '#ddd' }}>✕</span>
+                          ) : (
+                            <span
+                              className="text-xs font-bold px-2 py-0.5 rounded-full"
+                              style={{
+                                background: isCF ? 'var(--gd)' : 'rgba(0,0,0,0.06)',
+                                color: isCF ? 'white' : 'var(--ink)',
+                              }}
+                            >
+                              {val === 'dep' ? 'Depende' : val === 'sep' ? 'Separado' : String(val)}
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
