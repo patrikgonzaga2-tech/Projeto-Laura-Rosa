@@ -1,54 +1,184 @@
 'use client'
 
-const testimonialImages = [
+import { useRef, useState, useEffect } from 'react'
+
+// Aspect ratios measured from the actual screenshot images (width / height).
+// Portrait screenshots (phone screenshots) are ~0.46. Landscape are ~1.3+.
+const allImages = [
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-7-GkyR4FRazkbfKWnmvfI9BQb7dc0YE3.jpg',
     alt: 'Depoimento — antes e depois barriga',
+    ratio: 0.46, // portrait phone screenshot
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-13-zkDyjT9kYA8LAHwkqDoKV5gPcmQqhD.jpg',
     alt: 'Depoimento — calça que voltou a servir',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-10-EjMDxGsWDkEgJ4zzEPKM2t45fifW86.jpg',
     alt: 'Depoimento Fernanda Moreira',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-14-lQF0W9oLkXYCSioRuebx2ePbURW2b3.jpg',
     alt: 'Depoimento Sabrina e Keila',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-9-LyLxLxTKytYniCWnvEl9BAh4Qaggwu.jpg',
     alt: 'Depoimento Vitória Barros -7kg',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-11-Kz1FIVnL3Smro58Nqp7nG1IIccWweF.png',
     alt: 'Depoimento Gabriela Silva',
+    ratio: 1.33, // landscape chat screenshot
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-15-aGawae8BNBorC6HhWzj1c9Hs739Ap5.jpg',
     alt: 'Depoimento Monalisa MUSA',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-12-u0hA4ydLEJvg5rbadHN8hWrWBgPgAt.jpg',
     alt: 'Depoimento Daisy Nunes — shorts 36',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-2-k3QVOnjOueigUf3fl8PrCSVbb5y7e8.jpg',
     alt: 'Depoimento Cibele Almeida — balança',
+    ratio: 0.46,
   },
 ]
 
-function Card({ img, dark }: { img: { src: string; alt: string }; dark?: boolean }) {
+type ImageItem = typeof allImages[number]
+
+/**
+ * Justified gallery algorithm.
+ * Groups images into rows so each row fills `containerWidth` exactly.
+ * `targetRowHeight` is the ideal row height before adjustment.
+ * Returns an array of rows, each with the computed row height and images with their widths.
+ */
+function buildRows(
+  images: ImageItem[],
+  containerWidth: number,
+  targetRowHeight: number,
+  gap: number,
+) {
+  const rows: { height: number; items: { img: ImageItem; width: number }[] }[] = []
+  let i = 0
+
+  while (i < images.length) {
+    // Accumulate images until the row is full
+    let rowRatioSum = 0
+    let j = i
+
+    while (j < images.length) {
+      rowRatioSum += images[j].ratio
+      const rowWidthUsed = rowRatioSum * targetRowHeight + gap * (j - i)
+      j++
+      if (rowWidthUsed >= containerWidth) break
+    }
+
+    const rowImages = images.slice(i, j)
+    const totalGap = gap * (rowImages.length - 1)
+    const totalRatio = rowImages.reduce((s, img) => s + img.ratio, 0)
+    // Solve: totalRatio * rowHeight + totalGap = containerWidth
+    const rowHeight = (containerWidth - totalGap) / totalRatio
+
+    rows.push({
+      height: rowHeight,
+      items: rowImages.map((img) => ({
+        img,
+        width: img.ratio * rowHeight,
+      })),
+    })
+
+    i = j
+  }
+
+  return rows
+}
+
+function JustifiedGallery({
+  images,
+  dark,
+  targetRowHeight = 340,
+  gap = 8,
+}: {
+  images: ImageItem[]
+  dark?: boolean
+  targetRowHeight?: number
+  gap?: number
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const ro = new ResizeObserver(([entry]) => {
+      setWidth(entry.contentRect.width)
+    })
+    ro.observe(el)
+    setWidth(el.getBoundingClientRect().width)
+    return () => ro.disconnect()
+  }, [])
+
+  const isMobile = width > 0 && width < 640
+
   return (
-    <div
-      className="reveal relative overflow-hidden break-inside-avoid mb-3.5 block transition-all duration-300 hover:-translate-y-1 rounded-[22px]"
-      style={{
-        boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.3)' : '0 4px 24px rgba(0,0,0,0.1)',
-        border: dark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)',
-      }}
-    >
-      <img src={img.src} alt={img.alt} className="w-full h-auto block" loading="lazy" />
+    <div ref={containerRef} className="w-full">
+      {width === 0 ? null : isMobile ? (
+        // Mobile: single column, full width, natural ratio
+        <div className="flex flex-col" style={{ gap }}>
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="w-full overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5"
+              style={{
+                boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.3)' : '0 4px 24px rgba(0,0,0,0.1)',
+                border: dark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)',
+              }}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto block"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        // Desktop/tablet: justified rows
+        <div className="flex flex-col" style={{ gap }}>
+          {buildRows(images, width, targetRowHeight, gap).map((row, ri) => (
+            <div key={ri} className="flex" style={{ gap, height: row.height }}>
+              {row.items.map(({ img, width: imgWidth }, ii) => (
+                <div
+                  key={ii}
+                  className="overflow-hidden rounded-2xl flex-shrink-0 transition-all duration-300 hover:-translate-y-0.5"
+                  style={{
+                    width: imgWidth,
+                    height: row.height,
+                    boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.3)' : '0 4px 24px rgba(0,0,0,0.1)',
+                    border: dark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)',
+                  }}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    style={{ width: imgWidth, height: row.height, objectFit: 'contain', background: dark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)' }}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -95,11 +225,7 @@ export function SocialProof1() {
           </p>
         </div>
 
-        <div className="sm:[column-count:2] lg:[column-count:3]" style={{ columnGap: 14 }}>
-          {testimonialImages.slice(0, 6).map((img, i) => (
-            <Card key={i} img={img} />
-          ))}
-        </div>
+        <JustifiedGallery images={allImages.slice(0, 6)} targetRowHeight={360} gap={8} />
 
         <div className="reveal text-center mt-12">
           <a
@@ -162,11 +288,7 @@ export function SocialProof2() {
           </p>
         </div>
 
-        <div className="sm:[column-count:2] lg:[column-count:3]" style={{ columnGap: 14 }}>
-          {testimonialImages.slice(3).map((img, i) => (
-            <Card key={i} dark img={img} />
-          ))}
-        </div>
+        <JustifiedGallery images={allImages.slice(3)} dark targetRowHeight={360} gap={8} />
 
         <div className="reveal text-center mt-12">
           <a
