@@ -1,0 +1,192 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
+export function Hero() {
+  const [vslPlayed, setVslPlayed] = useState(false)
+
+  return (
+    <section
+      className="relative min-h-svh flex flex-col justify-end overflow-hidden"
+      style={{ background: 'var(--gd)' }}
+    >
+      {/* Blobs */}
+      <svg
+        className="blob-float1 absolute pointer-events-none will-change-transform"
+        style={{ top: '-20%', right: '-15%', width: 'min(700px,90vw)', height: 'min(700px,90vw)' }}
+        viewBox="0 0 400 400"
+      >
+        <path d="M60,20 C120,-20 220,10 280,60 C340,110 380,180 360,260 C340,340 260,390 180,380 C100,370 20,320 10,240 C0,160 0,60 60,20Z" fill="rgba(245,113,0,0.18)" />
+      </svg>
+      <svg
+        className="blob-float2 absolute pointer-events-none will-change-transform"
+        style={{ bottom: '-10%', left: '-10%', width: 'min(500px,70vw)', height: 'min(500px,70vw)' }}
+        viewBox="0 0 300 300"
+      >
+        <path d="M40,10 C90,-15 170,5 210,50 C250,95 270,160 240,210 C210,260 140,280 80,260 C20,240 -10,170 5,110 C20,50 -10,35 40,10Z" fill="rgba(28,135,60,0.25)" />
+      </svg>
+      <svg
+        className="blob-float3 absolute pointer-events-none will-change-transform"
+        style={{ top: '20%', left: '30%', width: 'min(300px,40vw)', height: 'min(300px,40vw)' }}
+        viewBox="0 0 200 200"
+      >
+        <path d="M30,10 C65,-5 120,5 150,40 C180,75 185,130 160,160 C135,190 80,195 45,175 C10,155 -5,100 5,65 C15,30 -5,25 30,10Z" fill="rgba(245,113,0,0.10)" />
+      </svg>
+
+      <div className="relative z-10 w-full max-w-[1080px] mx-auto px-5 sm:px-8 pt-24 sm:pt-28 lg:pt-32">
+        {/* Logo */}
+        <div className="reveal mb-10 sm:mb-12">
+          <div
+            className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-xl"
+            style={{ background: 'var(--o)', fontFamily: 'var(--font-display)' }}
+          >
+            CF
+          </div>
+        </div>
+
+        <h1
+          className="reveal reveal-d1 text-white mb-8 max-w-[780px]"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(44px,7vw,88px)',
+            fontWeight: 800,
+            lineHeight: 0.96,
+            letterSpacing: '-0.03em',
+          }}
+        >
+          Emagreça de<br />
+          verdade. Sem lutar<br />
+          contra{' '}
+          <em
+            className="not-italic relative inline-block"
+            style={{ color: 'var(--o)' }}
+          >
+            o seu corpo.
+            <span
+              className="absolute bottom-[-4px] left-0 right-0 h-[3px] rounded-sm"
+              style={{ background: 'var(--o)' }}
+            />
+          </em>
+        </h1>
+
+        <p
+          className="reveal reveal-d2 mb-10"
+          style={{
+            fontSize: 'clamp(15px,2vw,18px)',
+            lineHeight: 1.75,
+            color: 'rgba(255,255,255,0.65)',
+            maxWidth: 560,
+            fontFamily: 'var(--font-body)',
+          }}
+        >
+          Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.
+        </p>
+
+        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10">
+          <a
+            href="#planos"
+            className="inline-flex items-center gap-3 font-bold text-white rounded-full transition-all duration-300 hover:-translate-y-1"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(15px,1.5vw,18px)',
+              padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
+              background: 'var(--o)',
+              boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
+            }}
+          >
+            Quero entrar para as Musas
+            <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
+          </a>
+        </div>
+
+        {/* VSL */}
+        <div className="reveal reveal-d3 mb-16 w-full">
+          <div
+            className="relative rounded-3xl overflow-hidden"
+            style={{
+              background: 'rgba(0,0,0,0.5)',
+              aspectRatio: '16/9',
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.5)',
+            }}
+          >
+            {!vslPlayed && (
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center gap-4 cursor-pointer transition-all duration-300"
+                style={{ background: 'rgba(0,72,17,0.85)' }}
+                onClick={() => setVslPlayed(true)}
+              >
+                <div
+                  className="w-16 h-16 sm:w-[72px] sm:h-[72px] rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                  style={{
+                    background: 'var(--o)',
+                    boxShadow: '0 0 0 14px rgba(245,113,0,0.18)',
+                  }}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <span
+                  className="text-sm font-bold tracking-widest"
+                  style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-display)' }}
+                >
+                  Assista ao vídeo completo
+                </span>
+              </div>
+            )}
+            {vslPlayed && (
+              <iframe
+                className="absolute inset-0 w-full h-full border-0"
+                src="about:blank"
+                title="Corpo Feliz — Laura Rosa"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div
+          className="grid grid-cols-2 sm:grid-cols-4 overflow-hidden"
+          style={{
+            gap: 1,
+            background: 'rgba(255,255,255,0.08)',
+            borderRadius: '18px 18px 0 0',
+          }}
+        >
+          {[
+            { num: '+1.000', lbl: 'Musas ativas' },
+            { num: '15–30min', lbl: 'por treino' },
+            { num: '60 dias', lbl: 'resultados visíveis' },
+            { num: '14 dias', lbl: 'garantia total' },
+          ].map((s, i) => (
+            <div
+              key={i}
+              className="px-4 py-5 sm:px-5 sm:py-6"
+              style={{ background: 'rgba(0,0,0,0.25)', backdropFilter: 'blur(12px)' }}
+            >
+              <div
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(22px,3.5vw,38px)',
+                  fontWeight: 800,
+                  color: 'var(--o)',
+                  letterSpacing: '-0.03em',
+                  lineHeight: 1,
+                  marginBottom: 4,
+                }}
+              >
+                {s.num}
+              </div>
+              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', fontWeight: 500, letterSpacing: '0.04em' }}>
+                {s.lbl}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
