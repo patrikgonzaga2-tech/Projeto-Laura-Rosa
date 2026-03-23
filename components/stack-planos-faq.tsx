@@ -287,7 +287,7 @@ export function Garantia() {
             className="mt-4"
             style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4.5vw,56px)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.025em' }}
           >
-            14 dias de<br />
+            30 dias de<br />
             <span style={{ color: 'var(--gd)' }}>garantia total.</span>
           </h2>
         </div>
@@ -300,7 +300,7 @@ export function Garantia() {
                 boxShadow: '0 12px 48px rgba(28,135,60,0.3)',
               }}
             >
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 56, fontWeight: 800, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em' }}>14</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 56, fontWeight: 800, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em' }}>30</div>
               <div style={{ fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.75)', letterSpacing: '0.04em' }}>dias</div>
             </div>
           </div>
@@ -309,9 +309,9 @@ export function Garantia() {
               Sem perguntas. Sem burocracia.
             </div>
             <p style={{ fontSize: 16, color: 'var(--sub)', lineHeight: 1.82, marginBottom: 20 }}>
-              Ao entrar na Comunidade, há 14 dias para testar tudo. Fazer os treinos. Participar do grupo. Sentir na prática o que é treinar com o próprio ciclo pela primeira vez.<br /><br />
+              Ao entrar na Comunidade, há 30 dias para testar tudo. Fazer os treinos. Participar do grupo. Sentir na prática o que é treinar com o próprio ciclo pela primeira vez.<br /><br />
               Se por qualquer motivo não for o que esperava — é só mandar uma mensagem. O valor investido volta inteiro.<br /><br />
-              São 14 dias — não 7 como a maioria — porque em 14 dias de Treinos Hormonais já dá para sentir a diferença.
+              São 30 dias — não 7 como a maioria — porque em 30 dias de Treinos Hormonais já dá para sentir a diferença.
             </p>
             <div className="italic font-bold pt-4" style={{ fontSize: 15, color: 'var(--gd)', borderTop: '2px dashed rgba(28,135,60,0.2)' }}>
               O risco é nosso. A transformação é sua. — Laura Rosa
@@ -359,7 +359,7 @@ export function Faq() {
               style={{ background: 'rgba(245,113,0,0.08)', border: '1px solid rgba(245,113,0,0.2)' }}
             >
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 600, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>
-                Se depois de ler tudo ainda tiver dúvida — <strong style={{ color: 'var(--o)' }}>a garantia de 14 dias existe exatamente para isso.</strong> O risco é nosso.
+                Se depois de ler tudo ainda tiver dúvida — <strong style={{ color: 'var(--o)' }}>a garantia de 30 dias existe exatamente para isso.</strong> O risco é nosso.
               </p>
             </div>
           </div>
@@ -462,7 +462,7 @@ export function CtaFinal() {
           </a>
         </div>
         <div className="reveal reveal-d4" style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>
-          Acesso imediato · Garantia de 14 dias · Sem perguntas
+          Acesso imediato · Garantia de 30 dias · Sem perguntas
         </div>
         <div
           className="reveal max-w-[680px] mx-auto mt-16 p-6 sm:p-8 text-left"
@@ -471,7 +471,7 @@ export function CtaFinal() {
           <div className="mb-3 text-xs font-bold tracking-[0.14em] uppercase" style={{ color: 'rgba(255,255,255,0.6)' }}>P.S.</div>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8 }}>
             Se chegou até aqui sem assistir ao vídeo — volta e assiste. A Laura conta tudo sobre o método, a própria história com SOP, e por que mais de 1.000 mulheres escolheram o Corpo Feliz.<br /><br />
-            Se assistiu e ainda está aqui: <strong className="text-white">já sabe o que precisa saber.</strong> Daqui a 14 dias, pode estar exatamente onde está hoje. Ou pode estar fazendo os primeiros Treinos Hormonais da vida, entendendo o próprio ciclo, sentindo o que é treinar a favor do próprio corpo. Risco zero. Garantia total. A Laura esperando no grupo.
+            Se assistiu e ainda está aqui: <strong className="text-white">já sabe o que precisa saber.</strong> Daqui a 30 dias, pode estar exatamente onde está hoje. Ou pode estar fazendo os primeiros Treinos Hormonais da vida, entendendo o próprio ciclo, sentindo o que é treinar a favor do próprio corpo. Risco zero. Garantia total. A Laura esperando no grupo.
           </p>
         </div>
       </div>

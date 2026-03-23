@@ -20,7 +20,7 @@ const marqueeItems1 = [
 
 const marqueeItems2 = [
   '+1.000 Musas ativas',
-  '14 dias de garantia',
+  '30 dias de garantia',
   'Acompanhamento diário real',
   'Em casa · 15 minutos',
   'Treinos que respeitam o ciclo',
