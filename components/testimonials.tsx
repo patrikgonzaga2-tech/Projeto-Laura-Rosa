@@ -63,52 +63,84 @@ const imgs2 = [
   },
 ]
 
-// Rows: each sub-array groups images that share a row
-// flex-grow is set to the aspect ratio so images fill the row width proportionally
-const rows1 = [
-  [imgs1[0], imgs1[1]],
-  [imgs1[2], imgs1[3], imgs1[4]],
+// Rows: each sub-array groups images that share a row.
+// Width is proportional to ratio; height per row = tallest image in that row (determined by aspect ratio).
+// We compute the row height from the widest container divided by the total ratio sum × each image ratio.
+// In practice: we use a "height anchor" approach — a padding-bottom trick per cell so no cropping occurs.
+
+const rows1: Img[][] = [
+  [imgs1[0], imgs1[1], imgs1[2]],
+  [imgs1[3], imgs1[4]],
 ]
 
-const rows2 = [
+const rows2: Img[][] = [
   [imgs2[0], imgs2[1]],
   [imgs2[2], imgs2[3]],
 ]
 
 type Img = { src: string; alt: string; ratio: number }
 
-function BentoGrid({ rows, dark }: { rows: Img[][]; dark?: boolean }) {
-  const ROW_H = 280
+function BentoRow({ row, dark, gap }: { row: Img[]; dark?: boolean; gap: number }) {
+  // The tallest image (smallest ratio) anchors the row height via its natural aspect ratio.
+  const tallest = row.reduce((a, b) => (a.ratio < b.ratio ? a : b))
+
   return (
-    <div className="flex flex-col gap-2">
-      {rows.map((row, ri) => (
-        <div key={ri} className="flex gap-2" style={{ height: ROW_H }}>
-          {row.map((img, ii) => (
-            <div
-              key={ii}
-              className="relative overflow-hidden rounded-2xl reveal transition-all duration-300 hover:-translate-y-1"
-              style={{
-                flex: img.ratio,
-                minWidth: 0,
-                boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.35)' : '0 4px 20px rgba(0,0,0,0.12)',
-                border: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.05)',
-              }}
-            >
+    <div className="flex" style={{ gap, alignItems: 'stretch' }}>
+      {row.map((img, ii) => {
+        const isAnchor = img === tallest
+        return (
+          <div
+            key={ii}
+            className="relative overflow-hidden rounded-2xl reveal transition-all duration-300 hover:-translate-y-1"
+            style={{
+              flex: `${img.ratio} 0 0`,
+              minWidth: 0,
+              boxShadow: dark ? '0 4px 24px rgba(0,0,0,0.35)' : '0 4px 20px rgba(0,0,0,0.12)',
+              border: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.05)',
+            }}
+          >
+            {isAnchor ? (
+              // Anchor: display naturally to set row height, then overlay the real image
+              <>
+                <img
+                  src={img.src}
+                  alt=""
+                  aria-hidden="true"
+                  className="block w-full h-auto invisible"
+                  loading="lazy"
+                />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </>
+            ) : (
+              // Non-anchor: stretch to fill the row height set by the anchor
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover"
               />
-            </div>
-          ))}
-        </div>
-      ))}
+            )}
+          </div>
+        )
+      })}
     </div>
   )
 }
 
-function CtaBtn({ label }: { label: string }) {
+function BentoGrid({ rows, dark }: { rows: Img[][]; dark?: boolean }) {
+  return (
+    <div className="flex flex-col gap-2">
+      {rows.map((row, ri) => (
+        <BentoRow key={ri} row={row} dark={dark} gap={8} />
+      ))}
+    </div>
+  )
+}
   return (
     <div className="reveal text-center mt-12">
       <a
