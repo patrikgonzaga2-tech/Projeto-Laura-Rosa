@@ -39,7 +39,7 @@ const testimonialImages = [
   },
 ]
 
-function TestimonialCard({ img, dark }: { img: { src: string; alt: string }; dark?: boolean }) {
+function Card({ img, dark }: { img: { src: string; alt: string }; dark?: boolean }) {
   return (
     <div
       className="reveal relative overflow-hidden break-inside-avoid mb-3.5 block transition-all duration-300 hover:-translate-y-1 rounded-[22px]"
@@ -48,12 +48,7 @@ function TestimonialCard({ img, dark }: { img: { src: string; alt: string }; dar
         border: dark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)',
       }}
     >
-      <img
-        src={img.src}
-        alt={img.alt}
-        className="w-full h-auto block"
-        loading="lazy"
-      />
+      <img src={img.src} alt={img.alt} className="w-full h-auto block" loading="lazy" />
     </div>
   )
 }
@@ -102,7 +97,7 @@ export function SocialProof1() {
 
         <div className="sm:[column-count:2] lg:[column-count:3]" style={{ columnGap: 14 }}>
           {testimonialImages.slice(0, 6).map((img, i) => (
-            <TestimonialCard key={i} img={img} />
+            <Card key={i} img={img} />
           ))}
         </div>
 
@@ -169,7 +164,7 @@ export function SocialProof2() {
 
         <div className="sm:[column-count:2] lg:[column-count:3]" style={{ columnGap: 14 }}>
           {testimonialImages.slice(3).map((img, i) => (
-            <TestimonialCard key={i} dark img={img} />
+            <Card key={i} dark img={img} />
           ))}
         </div>
 
