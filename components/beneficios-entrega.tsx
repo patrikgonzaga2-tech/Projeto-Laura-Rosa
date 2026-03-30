@@ -146,7 +146,7 @@ export function Beneficios() {
             </h2>
             <div className="reveal reveal-d2" style={{ fontSize: 17, color: 'var(--sub)', lineHeight: 1.85 }}>
               <p>Na primeira semana, a diferença no corpo aparece antes mesmo de ser vista, você se sente com mais energia, menos inchaço. A vontade de doce começa a diminuir.</p>
-              <p className="mt-4">Nos primeiros dois meses, o corpo começa a responder de formas inesperadas. A barriga seca. Os braços afinam. A balança move — mas o que se nota primeiro não é o número. São as roupas servindo diferente.</p>
+              <p className="mt-4">Em 30 dias a mudança no corpo se torna totalmente visível. A barriga diminui, os braços afinam, a celulites somem e a balança se torna sua amiga - mas o que despenca primeiro, não é peso, são roupas servindo e ficando largas.</p>
               <p className="mt-4">Com o tempo, algo mais profundo muda. O treino deixa de ser punição e vira cuidado. A culpa vai embora. O ciclo vira aliado.</p>
             </div>
             <div className="reveal mt-8">
