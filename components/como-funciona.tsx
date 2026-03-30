@@ -54,7 +54,7 @@ const items = [
   {
     freq: 'Todo momento',
     titulo: 'Uma comunidade que cresce junto',
-    desc: '+1.000 mulheres que entendem o que está sendo vivido. Estrutura que transforma intenção em resultado.',
+    desc: '+1.000 mulheres reais que vivem o mesmo que você e são uma verdadeira rede de apoio. Estrutura de acolhimento que transformam seus resultados.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
