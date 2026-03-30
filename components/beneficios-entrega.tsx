@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 const beneficios = [
-  { num: '01', txt: 'Emagrecimento de 4 a 10kg nos primeiros 60 dias — sem dieta restritiva, sem passar fome' },
+  { num: '01', txt: 'Emagreça até 5kg nos primeiros 30 dias - sem dieta restritiva, sem passar fome' },
   { num: '02', txt: 'Barriga mais seca e braços mais finos — as áreas que mais incomodam e que treinos genéricos ignoram' },
   { num: '03', txt: 'Mais energia, sono melhor, menos ansiedade — porque cortisol regulado muda tudo' },
   { num: '04', txt: 'Fim do ciclo do efeito sanfona — tratando a causa, não o sintoma' },
