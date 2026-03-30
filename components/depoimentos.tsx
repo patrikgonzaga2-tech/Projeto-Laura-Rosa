@@ -126,7 +126,7 @@ function JustifiedGallery({
     return () => ro.disconnect()
   }, [])
 
-  const isMobile = width > 0 && width < 640
+  const isMobile = width > 0 && width < 768
 
   return (
     <div ref={containerRef} className="w-full">
