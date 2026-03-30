@@ -14,7 +14,7 @@ const items = [
   {
     freq: 'Todo dia',
     titulo: 'Acompanhamento da própria Laura',
-    desc: 'Às 4h da manhã já tem Musa treinando. E a Laura já está lá. Não é equipe respondendo no lugar dela — é ela, todos os dias.',
+    desc: 'Às 4h da manhã já tem Musa treinando. E a Profe Laüra já está lá também com você. Não é equipe respondendo no lugar dela - é a profe, todos os dias juntinhas. ',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><circle cx="9" cy="11" r=".5" fill="currentColor" stroke="none" /><circle cx="12" cy="11" r=".5" fill="currentColor" stroke="none" /><circle cx="15" cy="11" r=".5" fill="currentColor" stroke="none" />
