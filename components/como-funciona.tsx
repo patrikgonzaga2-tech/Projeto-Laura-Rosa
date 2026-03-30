@@ -34,7 +34,7 @@ const items = [
   {
     freq: 'Nos dias impossíveis',
     titulo: 'Treinos Mega Curtos — 3 e 5 minutos',
-    desc: 'Porque rotina real não é linear. Quando a agenda não dá trégua, 3 minutos são suficientes para não parar.',
+    desc: 'Porque a rotina real não é perfeita. Quando a agenda vira loucura, quando faltam horas no dia, 3 minutos são suficientes para fazer seu corpo feliz e manter a constância.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" stroke="none" />
