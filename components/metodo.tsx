@@ -98,7 +98,7 @@ export function Metodo() {
                     lineHeight: 1.65,
                   }}
                 >
-                  "Ignorar isso é como tentar dirigir com o freio de mão puxado. Você até anda. Mas sofre muito mais do que deveria — e chega muito menos longe do que poderia."
+                  {"\"Ignorar seus hormônios é ir contra nosso ciclo natural e amadurecimento. Às vezes até consegue um resultado.\nMas é tanto sacrifício e esforço que se torna insustentável.\""}
                 </p>
               </div>
             </div>
