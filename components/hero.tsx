@@ -207,7 +207,7 @@ export function Hero() {
           {[
             { num: '+1.000', lbl: 'Musas ativas' },
             { num: '15–30min', lbl: 'por treino' },
-            { num: '30 dias', lbl: 'resultados visíveis' },
+            { num: '30 dias', lbl: 'resultados expressivos' },
             { num: '14 dias', lbl: 'garantia total' },
           ].map((s, i) => (
             <div
