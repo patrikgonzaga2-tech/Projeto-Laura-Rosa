@@ -127,7 +127,7 @@ export function Metodo() {
           </div>
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 6 }}>Primeiro passo: Avaliação Física</h4>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: 500 }}>Antes de qualquer treino, a jornada começa com uma avaliação. Histórico, nível atual e objetivos reais. A partir daí, cada mulher recebe um caminho específico — não o mesmo de todo mundo. O dela.</p>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: 500 }}>Antes de qualquer treino, a jornada começa com nossa avaliação física e identificação da sua jornada. Histórico, nível atual de condicionamento e objetivos reais. A partir daqui, você recebe todo o direcionamento a seguir e ver seu primeiro resultado expressivo em 30 dias.</p>
           </div>
         </div>
 
