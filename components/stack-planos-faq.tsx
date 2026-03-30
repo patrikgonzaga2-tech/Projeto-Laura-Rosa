@@ -449,7 +449,9 @@ export function CtaFinal() {
           className="reveal reveal-d2 mx-auto mb-12"
           style={{ fontSize: 'clamp(15px,2vw,18px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, maxWidth: 520 }}
         >
-          Duas opções a partir daqui. Continua exatamente onde está. Ou entra para a Comunidade e começa a treinar do jeito que o corpo feminino foi feito para treinar.
+          Duas opções a partir de agora. Continuar frustada e sem ânimo ou entrar para a Comunidade e começar a emagrecer do jeito que o corpo feminino foi feito para treinar.{' '}
+          <br /><br />
+          VAMOS JUNTAS?
         </p>
         <div className="reveal reveal-d3 flex flex-wrap gap-3.5 justify-center mb-7">
           <a
