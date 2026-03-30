@@ -145,7 +145,7 @@ export function Beneficios() {
               <span style={{ color: 'var(--gd)' }}>é o certo.</span>
             </h2>
             <div className="reveal reveal-d2" style={{ fontSize: 17, color: 'var(--sub)', lineHeight: 1.85 }}>
-              <p>Nas primeiras semanas, a diferença aparece antes de ser vista. Mais energia. Menos inchaço. A vontade de doce que explodia em certas fases do mês começa a diminuir.</p>
+              <p>Na primeira semana, a diferença no corpo aparece antes mesmo de ser vista, você se sente com mais energia, menos inchaço. A vontade de doce começa a diminuir.</p>
               <p className="mt-4">Nos primeiros dois meses, o corpo começa a responder de formas inesperadas. A barriga seca. Os braços afinam. A balança move — mas o que se nota primeiro não é o número. São as roupas servindo diferente.</p>
               <p className="mt-4">Com o tempo, algo mais profundo muda. O treino deixa de ser punição e vira cuidado. A culpa vai embora. O ciclo vira aliado.</p>
             </div>
