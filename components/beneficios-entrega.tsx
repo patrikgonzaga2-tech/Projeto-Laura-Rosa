@@ -71,7 +71,7 @@ const accData = [
   },
   {
     nome: 'Nutrição',
-    sub: 'Sem restrição extrema. Comer não é punição.',
+    sub: 'Sem restrição. Comer não é punição.',
     colorClass: 'g',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
@@ -79,8 +79,8 @@ const accData = [
       </svg>
     ),
     items: [
-      'Calculadora de calorias personalizada',
-      'Plano Alimentar por objetivo — para cada fase do ciclo',
+      'Cálculo de calorias personalizada para o seu objetivo',
+      'Plano alimentar baseado nas suas calorias para cada fase do seu emagrecimento',
       'Receitas Saudáveis — práticas para a rotina real',
     ],
   },
