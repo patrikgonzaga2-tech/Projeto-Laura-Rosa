@@ -401,7 +401,7 @@ export function Comparacao() {
           className="reveal reveal-d1 text-center mt-4 mb-12 sm:mb-14"
           style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4.5vw,56px)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.025em' }}
         >
-          Por que o Corpo Feliz entrega<br />
+          Por que a Corpo Feliz entrega<br />
           o que outros <span style={{ color: 'var(--o)' }}>não conseguem.</span>
         </h2>
 
