@@ -26,7 +26,7 @@ const stackCats = [
     title: 'E-books + Conteúdo + Comunidade',
     rows: [
       { nome: '4 E-books + Encontros ao Vivo gravados', val: 'R$385' },
-      { nome: 'Suporte individual + Comunidade das Musas', val: 'Incalculável' },
+      { nome: 'Suporte com a Profe Laüra Rosa todo dia + Comunidade das Musas', val: 'Incalculável' },
       { nome: 'A Laura no WhatsApp todos os dias', val: 'Incalculável' },
     ],
   },
