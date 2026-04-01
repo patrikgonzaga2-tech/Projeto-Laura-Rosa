@@ -23,10 +23,10 @@ const accData = [
     ),
     items: [
       'Avaliação Física de entrada — seu caminho personalizado, não o de todo mundo',
-      'Trilha Completa: Iniciante I, Iniciante II, Intermediária e Avançada',
-      'Treinos Hormonais organizados por fase do ciclo — casa + academia + atualizações mensais',
+      'Trilha Completa: Treino em casa e academia com atualizações mensais',
+      'Treino Hormonais organizados por fase do ciclo: Iniciante I, Iniciante II, Intermediário e Avançada',
       'Treinos Mega Curtos de 3 e 5 minutos — para os dias impossíveis',
-      'Fichas para Academia — Fases 3 a 8, atualizadas a cada ciclo',
+      'Fichas para Academia: já disponível da Fase 1 até a 8 e novas Fases atualizadas a cada 8 semanas',
       'Treinos Metabólicos para Academia',
       'Treinos para Viagem — hotel, parque, praia',
       'Treinos Localizados: Coxas, Superiores, Cardio, Glúteo, Corpo Todo, Core, Cardios ao Ar Livre',
