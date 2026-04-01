@@ -50,6 +50,31 @@ const allImages = [
     alt: 'Depoimento Cibele Almeida — balança',
     ratio: 0.46,
   },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-03-25%20at%2013.27.41-0dsNsdGl1yhFdi6UiBdu42FJXJaXqn.jpeg',
+    alt: 'Depoimento Gabriela Soares MUSA Semestral — 3 meses de transformação',
+    ratio: 0.56,
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-03-26%20at%2005.01.43-3hgkUNpCmVoujT62fuBq6gHDD9XilP.jpeg',
+    alt: 'Depoimento Keila Brito MUSA — lipedema e melhora das dores menstruais',
+    ratio: 0.46,
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-03-25%20at%2013.38.18-5AXX6VXElIPgvOdXFbVOQu5wZovLyI.jpeg',
+    alt: 'Resultado -15kg com Método Corpo Feliz — de 101,9kg para 87,45kg',
+    ratio: 0.56,
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-03-25%20at%2015.28.13-xudmIIAI9vT8Sg3rMjJ22aKwRl2uEx.jpeg',
+    alt: 'Depoimento Regina Machado MUSA — medidas de Novembro 2025 a Fevereiro 2026',
+    ratio: 0.46,
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-03-25%20at%2013.40.55-Pa1SH6jxFKdKTl18vNO3JuX43dmEeK.jpeg',
+    alt: 'Depoimento transformação pós-gravidez com método da Laura',
+    ratio: 0.56,
+  },
 ]
 
 type ImageItem = typeof allImages[number]
