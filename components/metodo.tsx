@@ -264,7 +264,7 @@ export function Metodo() {
             boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
           }}
         >
-          Quero treinar com o meu ciclo
+          Quero treinar a favor do meu ciclo
           <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
         </a>
       </div>
