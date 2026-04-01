@@ -473,7 +473,7 @@ export function CtaFinal() {
           <div className="mb-3 text-xs font-bold tracking-[0.14em] uppercase" style={{ color: 'rgba(255,255,255,0.6)' }}>P.S.</div>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8 }}>
             Se chegou até aqui sem assistir ao vídeo — volta e assiste. A Laura conta tudo sobre o método, a própria história com SOP, e por que mais de 1.000 mulheres escolheram o Corpo Feliz.<br /><br />
-            Se assistiu e ainda está aqui: <strong className="text-white">já sabe o que precisa saber.</strong> Daqui a 30 dias, pode estar exatamente onde está hoje. Ou pode estar fazendo os primeiros Treinos Hormonais da vida, entendendo o próprio ciclo, sentindo o que é treinar a favor do próprio corpo. Risco zero. Garantia total. A Laura esperando no grupo.
+            Daqui a 30 dias, pode estar exatamente onde está hoje. Ou pode estar fazendo os primeiros Treinos Hormonais da vida, entendendo o próprio ciclo, sentindo o que é treinar a favor do próprio corpo. Risco zero. Garantia total. A Laura esperando no grupo.
           </p>
         </div>
       </div>
