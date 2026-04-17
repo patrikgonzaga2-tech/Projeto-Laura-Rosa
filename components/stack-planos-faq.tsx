@@ -54,15 +54,6 @@ const planos = [
     cta: 'Garantir agora ›',
   },
   {
-    nome: 'Plano Trimestral',
-    de: 'de R$239,40',
-    preco: 'R$70',
-    precoLabel: '3x de ',
-    per: 'ou R$210 à vista',
-    avista: 'Acesso por 3 meses',
-    cta: 'Garantir agora ›',
-  },
-  {
     nome: 'Plano Mensal',
     de: '',
     preco: 'R$97',
