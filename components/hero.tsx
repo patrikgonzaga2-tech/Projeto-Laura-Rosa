@@ -3,7 +3,11 @@
 import Script from 'next/script'
 import { useReveal } from '@/hooks/use-reveal'
 
-export function Hero() {
+interface HeroProps {
+  hideBottomContent?: boolean
+}
+
+export function Hero({ hideBottomContent = false }: HeroProps) {
   useReveal()
 
   return (
@@ -102,63 +106,67 @@ export function Hero() {
           />
         </div>
 
-        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16 justify-center">
-          <a
-            href="#planos"
-            aria-label="Quero entrar para as Musas — ver planos"
-            className="font-display inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
-            style={{
-              fontSize: 'clamp(15px,1.5vw,18px)',
-              padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
-              background: 'var(--o)',
-              color: '#000',
-              boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
-            }}
-          >
-            Quero entrar para as Musas
-            <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
-          </a>
-        </div>
-
-        {/* Stats */}
-        <div
-          className="grid grid-cols-2 sm:grid-cols-4 overflow-hidden"
-          style={{
-            gap: 1,
-            background: 'rgba(255,255,255,0.08)',
-            borderRadius: '18px 18px 0 0',
-          }}
-        >
-          {[
-            { num: '+1.000', lbl: 'Musas ativas' },
-            { num: '15–30min', lbl: 'por treino' },
-            { num: '30 dias', lbl: 'resultados expressivos' },
-            { num: '30 dias', lbl: 'garantia total' },
-          ].map((s, i) => (
-            <div
-              key={i}
-              className="px-4 py-5 sm:px-5 sm:py-6"
-              style={{ background: 'rgba(0,0,0,0.25)', backdropFilter: 'blur(12px)' }}
-            >
-              <div
-                className="font-display"
+        {!hideBottomContent && (
+          <>
+            <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16 justify-center">
+              <a
+                href="#planos"
+                aria-label="Quero entrar para as Musas — ver planos"
+                className="font-display inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
                 style={{
-                  fontSize: 'clamp(22px,3.5vw,38px)',
-                  fontWeight: 800,
-                  color: 'var(--o)',
-                  letterSpacing: '-0.03em',
-                  lineHeight: 1,
-                  marginBottom: 4,
+                  fontSize: 'clamp(15px,1.5vw,18px)',
+                  padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
+                  background: 'var(--o)',
+                  color: '#000',
+                  boxShadow: '0 8px 40px rgba(245,113,0,0.35)',
                 }}
               >
-                {s.num}
-              </div>
-              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: 500, letterSpacing: '0.04em' }}>
-                {s.lbl}
-              </div>
+                Quero entrar para as Musas
+                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
+              </a>
             </div>
-          ))}
-        </div>
+
+            {/* Stats */}
+            <div
+              className="grid grid-cols-2 sm:grid-cols-4 overflow-hidden"
+              style={{
+                gap: 1,
+                background: 'rgba(255,255,255,0.08)',
+                borderRadius: '18px 18px 0 0',
+              }}
+            >
+              {[
+                { num: '+1.000', lbl: 'Musas ativas' },
+                { num: '15–30min', lbl: 'por treino' },
+                { num: '30 dias', lbl: 'resultados expressivos' },
+                { num: '30 dias', lbl: 'garantia total' },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="px-4 py-5 sm:px-5 sm:py-6"
+                  style={{ background: 'rgba(0,0,0,0.25)', backdropFilter: 'blur(12px)' }}
+                >
+                  <div
+                    className="font-display"
+                    style={{
+                      fontSize: 'clamp(22px,3.5vw,38px)',
+                      fontWeight: 800,
+                      color: 'var(--o)',
+                      letterSpacing: '-0.03em',
+                      lineHeight: 1,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {s.num}
+                  </div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: 500, letterSpacing: '0.04em' }}>
+                    {s.lbl}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   )

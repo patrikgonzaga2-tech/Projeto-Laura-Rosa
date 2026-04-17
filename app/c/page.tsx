@@ -41,7 +41,7 @@ export default function Page() {
 
   return (
     <main>
-      <Hero />
+      <Hero hideBottomContent={!showContent} />
       {showContent && (
         <>
           <MarqueeStrip items={marqueeItems1} />
