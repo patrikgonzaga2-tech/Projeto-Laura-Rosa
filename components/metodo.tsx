@@ -56,9 +56,8 @@ export function Metodo() {
                 ✦ O método
               </span>
               <h2
-                className="reveal reveal-d1 mt-4 text-white"
+                className="reveal reveal-d1 font-display mt-4 text-white"
                 style={{
-                  fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(32px,5vw,60px)',
                   fontWeight: 800,
                   lineHeight: 1.05,
@@ -254,9 +253,8 @@ export function Metodo() {
       <div className="reveal text-center py-12 sm:py-14 px-5">
         <a
           href="#planos"
-          className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
+          className="font-display inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
           style={{
-            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(15px,1.5vw,18px)',
             padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
             background: 'var(--o)',

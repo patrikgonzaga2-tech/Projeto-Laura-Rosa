@@ -51,9 +51,8 @@ export function Hero() {
         </div>
 
         <h1
-          className="reveal reveal-d1 text-white mb-8 max-w-[780px]"
+          className="reveal reveal-d1 font-display text-white mb-8 max-w-[780px]"
           style={{
-            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(44px,7vw,88px)',
             fontWeight: 800,
             lineHeight: 0.96,
@@ -107,9 +106,8 @@ export function Hero() {
           <a
             href="#planos"
             aria-label="Quero entrar para as Musas — ver planos"
-            className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
+            className="font-display inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
             style={{
-              fontFamily: 'var(--font-display)',
               fontSize: 'clamp(15px,1.5vw,18px)',
               padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)',
               background: 'var(--o)',
@@ -143,8 +141,8 @@ export function Hero() {
               style={{ background: 'rgba(0,0,0,0.25)', backdropFilter: 'blur(12px)' }}
             >
               <div
+                className="font-display"
                 style={{
-                  fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(22px,3.5vw,38px)',
                   fontWeight: 800,
                   color: 'var(--o)',

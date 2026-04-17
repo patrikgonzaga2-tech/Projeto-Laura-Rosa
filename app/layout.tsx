@@ -14,7 +14,7 @@ const bricolage = Bricolage_Grotesque({
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -80,8 +80,8 @@ export default function RootLayout({
         </noscript>
         {children}
         <Analytics />
-        {/* Script de rastreio UTM */}
-        <Script id="utm-tracker" strategy="afterInteractive">{`
+        {/* Script de rastreio UTM — roda somente quando a página está ociosa */}
+        <Script id="utm-tracker" strategy="lazyOnload">{`
           console.log('%cScript de rastreio by Comunidade Nova Ordem do Digital - Dericson Calari e Samuel Choairy', 'color: purple; font-size: 20px;');
           (function () {
             let parametros = ["utm_source"];
