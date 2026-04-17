@@ -364,6 +364,13 @@ export function Bonus() {
             </p>
           </div>
           <div className="reveal reveal-d1 flex flex-col gap-3.5">
+            <div className="rounded-2xl overflow-hidden w-full mb-1">
+              <img
+                src="/images/laura-whatsapp.svg"
+                alt="Laura Rosa — criadora do Método Corpo Feliz"
+                className="w-full h-auto object-cover"
+              />
+            </div>
             {bonusCards.map((card, i) => (
               <div
                 key={i}
