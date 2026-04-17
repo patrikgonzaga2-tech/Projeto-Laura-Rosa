@@ -114,7 +114,7 @@ export function ComoFunciona() {
             {/* Foto da Laura */}
             <div className="reveal reveal-d1 rounded-3xl overflow-hidden w-full" style={{ aspectRatio: '4/5' }}>
               <img
-                src="/images/laura.jpg"
+                src="/images/laura.svg"
                 alt="Laura Rosa, criadora do Método Corpo Feliz"
                 className="w-full h-full object-cover object-top"
               />
