@@ -1,10 +1,10 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Hero } from '@/components/hero'
 import { MarqueeStrip } from '@/components/marquee-strip'
-import { SocialProof1, SocialProof2 } from '@/components/gallery'
-import { Metodo } from '@/components/metodo'
-import { ComoFunciona } from '@/components/como-funciona'
-import { Beneficios, Entrega, Bonus, Comparacao } from '@/components/beneficios-entrega'
-import { Stack, Planos, Garantia, Faq, CtaFinal, Footer } from '@/components/stack-planos-faq'
+import { SocialProof1 } from '@/components/gallery'
+import { Planos, Garantia, CtaFinal, Footer } from '@/components/stack-planos-faq'
 
 const marqueeItems1 = [
   'Treinos Hormonais',
@@ -26,26 +26,33 @@ const marqueeItems2 = [
   'Laura no WhatsApp todo dia',
 ]
 
+const DELAY_MS = 7 * 60 * 1000 + 5 * 1000 // 7 minutos e 5 segundos = 425000ms
+
 export default function Page() {
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true)
+    }, DELAY_MS)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <main>
       <Hero />
-      <MarqueeStrip items={marqueeItems1} />
-      <SocialProof1 />
-      <Metodo />
-      <MarqueeStrip items={marqueeItems2} dark reverse />
-      <ComoFunciona />
-      <SocialProof2 />
-      <Beneficios />
-      <Entrega />
-      <Bonus />
-      <Comparacao />
-      <Stack />
-      <Planos />
-      <Garantia />
-      <Faq />
-      <CtaFinal />
-      <Footer />
+      {showContent && (
+        <>
+          <MarqueeStrip items={marqueeItems1} />
+          <SocialProof1 />
+          <MarqueeStrip items={marqueeItems2} dark reverse />
+          <Planos />
+          <Garantia />
+          <CtaFinal />
+          <Footer />
+        </>
+      )}
     </main>
   )
 }
