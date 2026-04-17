@@ -1,11 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import Script from 'next/script'
 import { useReveal } from '@/hooks/use-reveal'
 
 export function Hero() {
   useReveal()
-  const [vslPlayed, setVslPlayed] = useState(false)
 
   return (
     <section
@@ -89,44 +88,10 @@ export function Hero() {
 
         {/* VSL — visível SOMENTE no mobile acima do botão */}
         <div className="reveal reveal-d3 mb-6 sm:hidden w-full">
-          <div
-            className="relative rounded-2xl overflow-hidden"
-            style={{
-              background: 'rgba(0,0,0,0.5)',
-              aspectRatio: '16/9',
-              border: '1px solid rgba(255,255,255,0.1)',
-              boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
-            }}
-          >
-            {!vslPlayed && (
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-3 cursor-pointer"
-                style={{ background: 'rgba(0,72,17,0.85)' }}
-                onClick={() => setVslPlayed(true)}
-              >
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center"
-                  style={{ background: 'var(--o)', boxShadow: '0 0 0 12px rgba(245,113,0,0.18)' }}
-                >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <span className="text-xs font-bold tracking-widest" style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-display)' }}>
-                  Assistir ao vídeo
-                </span>
-              </div>
-            )}
-            {vslPlayed && (
-              <iframe
-                className="absolute inset-0 w-full h-full border-0"
-                src="about:blank"
-                title="Corpo Feliz — Laura Rosa"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              />
-            )}
-          </div>
+          <vturb-smartplayer
+            id="vid-69d7a4db299a69aeb30006b1"
+            style={{ display: 'block', margin: '0 auto', width: '100%' }}
+          />
         </div>
 
         <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10">
@@ -149,51 +114,16 @@ export function Hero() {
 
         {/* VSL — visível em tablet e desktop (abaixo do botão) */}
         <div className="reveal reveal-d3 mb-16 w-full hidden sm:block">
-          <div
-            className="relative rounded-3xl overflow-hidden"
-            style={{
-              background: 'rgba(0,0,0,0.5)',
-              aspectRatio: '16/9',
-              border: '1px solid rgba(255,255,255,0.1)',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.5)',
-            }}
-          >
-            {!vslPlayed && (
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-4 cursor-pointer transition-all duration-300"
-                style={{ background: 'rgba(0,72,17,0.85)' }}
-                onClick={() => setVslPlayed(true)}
-              >
-                <div
-                  className="w-16 h-16 sm:w-[72px] sm:h-[72px] rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110"
-                  style={{
-                    background: 'var(--o)',
-                    boxShadow: '0 0 0 14px rgba(245,113,0,0.18)',
-                  }}
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <span
-                  className="text-sm font-bold tracking-widest"
-                  style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-display)' }}
-                >
-                  Assista ao vídeo completo
-                </span>
-              </div>
-            )}
-            {vslPlayed && (
-              <iframe
-                className="absolute inset-0 w-full h-full border-0"
-                src="about:blank"
-                title="Corpo Feliz — Laura Rosa"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              />
-            )}
-          </div>
+          <vturb-smartplayer
+            id="vid-69d7a4db299a69aeb30006b1"
+            style={{ display: 'block', margin: '0 auto', width: '100%' }}
+          />
         </div>
+
+        <Script
+          src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
+          strategy="afterInteractive"
+        />
 
         {/* Stats */}
         <div
