@@ -73,7 +73,7 @@ export function ComoFunciona() {
       <div className="max-w-[1080px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left sticky visual */}
-          <div className="lg:sticky lg:top-24">
+          <div className="lg:sticky lg:top-24 flex flex-col gap-6">
             <div
               className="reveal rounded-3xl p-8 sm:p-10 lg:p-12 relative overflow-hidden"
               style={{ background: 'var(--o)' }}
@@ -110,6 +110,14 @@ export function ComoFunciona() {
                   Todo dia. Todo mês. Em qualquer rotina. A Comunidade foi feita para a vida real — não para a vida ideal.
                 </p>
               </div>
+            </div>
+            {/* Foto da Laura */}
+            <div className="reveal reveal-d1 rounded-3xl overflow-hidden w-full" style={{ aspectRatio: '4/5' }}>
+              <img
+                src="/images/laura.jpg"
+                alt="Laura Rosa, criadora do Método Corpo Feliz"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
 
