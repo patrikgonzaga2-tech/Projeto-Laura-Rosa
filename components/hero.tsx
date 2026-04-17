@@ -34,7 +34,7 @@ export function Hero() {
         <path d="M30,10 C65,-5 120,5 150,40 C180,75 185,130 160,160 C135,190 80,195 45,175 C10,155 -5,100 5,65 C15,30 -5,25 30,10Z" fill="rgba(245,113,0,0.10)" />
       </svg>
 
-      <div className="relative z-10 w-full max-w-[1080px] mx-auto px-5 sm:px-8 pt-24 sm:pt-28 lg:pt-32">
+      <div className="relative z-10 w-full max-w-[1080px] mx-auto px-5 sm:px-8 pt-12 sm:pt-14 lg:pt-16">
         {/* Logo */}
         <div className="reveal mb-10 sm:mb-12">
           <img
