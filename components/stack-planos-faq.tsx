@@ -43,6 +43,7 @@ const planos = [
     dest: true,
     badge: '✦ Melhor custo-benefício',
     cta: 'Garantir agora ›',
+    href: 'https://payfast.greenn.com.br/78187/offer/9nk4U0',
   },
   {
     nome: 'Plano Trimestral',
@@ -52,6 +53,7 @@ const planos = [
     per: 'ou R$197 à vista',
     avista: 'Acesso por 3 meses',
     cta: 'Garantir agora ›',
+    href: 'https://payfast.greenn.com.br/148339/offer/krf3mz',
   },
   {
     nome: 'Plano Mensal',
@@ -61,6 +63,7 @@ const planos = [
     per: 'por mês',
     avista: 'Para conhecer antes\nde se comprometer',
     cta: 'Começar agora ›',
+    href: 'https://payfast.greenn.com.br/148344/offer/o5sqIu',
   },
 ]
 
@@ -244,7 +247,9 @@ export function Planos() {
                   {p.avista}
                 </div>
                 <a
-                  href="#"
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-auto flex items-center justify-center gap-2 rounded-full font-bold text-sm text-white py-3.5 px-5 transition-all duration-300 hover:-translate-y-0.5"
                   style={{ background: p.dest ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.12)' }}
                 >
