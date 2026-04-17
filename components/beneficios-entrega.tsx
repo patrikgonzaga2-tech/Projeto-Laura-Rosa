@@ -94,10 +94,10 @@ const accData = [
       </svg>
     ),
     items: [
-      'E-book Receitas Saudáveis Gostosas',
-      'E-book Inteligência Emocional — compulsão, ansiedade, relação com comida têm solução',
-      'E-book 21 Dias de Abundância — mentalidade e hábitos',
-      'E-book Gestação Ativa / Mamãe Ativa',
+      'Cardápio de Receitas Saudáveis e Gostosas',
+      'Guia de Inteligência Emocional: compulsão, ansiedade, relação com comida têm solução',
+      'Jornada dos 21 Dias de Abundância — mentalidade e hábitos',
+      'Manual da Gestação Ativa / Mamãe Ativa',
       'Encontros ao Vivo gravados: Entenda seu Corpo, Saúde da Mulher, Quarentena Desafio e mais',
     ],
   },
