@@ -15,7 +15,7 @@ const accData = [
   {
     nome: 'Treinos',
     sub: 'Trilhas · Ciclo · Casa · Academia · Mega Curtos · Viagem · Localizados',
-    colorClass: 'g',
+    colorClass: 'o',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
         <path d="M6.5 6.5h11" /><path d="M6.5 17.5h11" /><line x1="6.5" y1="6.5" x2="6.5" y2="17.5" /><line x1="17.5" y1="6.5" x2="17.5" y2="17.5" /><rect x="3" y="5" width="3.5" height="14" rx="1.5" /><rect x="17.5" y="5" width="3.5" height="14" rx="1.5" />
@@ -85,7 +85,7 @@ const accData = [
     ],
   },
   {
-    nome: 'E-books e Encontros ao Vivo',
+    nome: 'Guias e Encontros ao Vivo',
     sub: 'Inteligência Emocional · Receitas · Mamãe Ativa · Entenda seu Corpo',
     colorClass: 'o',
     icon: (
