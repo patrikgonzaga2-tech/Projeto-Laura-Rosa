@@ -86,15 +86,7 @@ export function Hero() {
           Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.
         </p>
 
-        {/* VSL — visível SOMENTE no mobile acima do botão */}
-        <div className="reveal reveal-d3 mb-6 sm:hidden -mx-5 w-screen">
-          <vturb-smartplayer
-            id="vid-69d7a4db299a69aeb30006b1"
-            style={{ display: 'block', margin: '0 auto', width: '100%' }}
-          />
-        </div>
-
-        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10">
+        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-6 sm:mb-10">
           <a
             href="#planos"
             className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
@@ -112,18 +104,17 @@ export function Hero() {
           </a>
         </div>
 
-        {/* VSL — visível em tablet e desktop (abaixo do botão) */}
-        <div className="reveal reveal-d3 mb-16 w-full hidden sm:block">
+        {/* VSL — único player, full-width no mobile, contido no desktop */}
+        <div className="reveal reveal-d3 mb-10 sm:mb-16 -mx-5 sm:mx-0 w-screen sm:w-full">
           <vturb-smartplayer
             id="vid-69d7a4db299a69aeb30006b1"
             style={{ display: 'block', margin: '0 auto', width: '100%' }}
           />
+          <Script
+            src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
+            strategy="afterInteractive"
+          />
         </div>
-
-        <Script
-          src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
-          strategy="afterInteractive"
-        />
 
         {/* Stats */}
         <div
