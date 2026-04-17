@@ -6,9 +6,9 @@ import { useRef, useState, useEffect } from 'react'
 // Portrait screenshots (phone screenshots) are ~0.46. Landscape are ~1.3+.
 const allImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-7-GkyR4FRazkbfKWnmvfI9BQb7dc0YE3.jpg',
-    alt: 'Depoimento — antes e depois barriga',
-    ratio: 0.46, // portrait phone screenshot
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9785.PNG-gJlQ42DOBgVADaFIPk0ffy9Ava356o.jpeg',
+    alt: 'Depoimento Camila Custódio MUSA — saia que ficou larga',
+    ratio: 0.46,
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Co%CC%81pia%20de%20Depoimento-VSL-13-zkDyjT9kYA8LAHwkqDoKV5gPcmQqhD.jpg',
