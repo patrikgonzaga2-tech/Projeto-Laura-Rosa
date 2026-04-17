@@ -87,7 +87,7 @@ export function Hero() {
         </p>
 
         {/* VSL — visível SOMENTE no mobile acima do botão */}
-        <div className="reveal reveal-d3 mb-6 sm:hidden w-full">
+        <div className="reveal reveal-d3 mb-6 sm:hidden -mx-5 w-screen">
           <vturb-smartplayer
             id="vid-69d7a4db299a69aeb30006b1"
             style={{ display: 'block', margin: '0 auto', width: '100%' }}
