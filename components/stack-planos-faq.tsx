@@ -316,7 +316,9 @@ export function Garantia() {
         </div>
         <div className="reveal text-center mt-12">
           <a
-            href="#planos"
+            href="https://payfast.greenn.com.br/78187/offer/9nk4U0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
             style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(15px,1.5vw,18px)', padding: 'clamp(16px,2vw,22px) clamp(28px,3vw,52px)', background: 'var(--gd)', color: 'white', boxShadow: '0 8px 32px rgba(0,72,17,0.3)' }}
           >
