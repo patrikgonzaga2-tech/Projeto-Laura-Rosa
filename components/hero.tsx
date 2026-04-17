@@ -86,7 +86,21 @@ export function Hero() {
           Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.
         </p>
 
-        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-6 sm:mb-10">
+        {/* VSL — único player, com bordas arredondadas no mobile */}
+        <div className="reveal reveal-d3 mb-6 sm:mb-10">
+          <div className="rounded-2xl overflow-hidden sm:rounded-none">
+            <vturb-smartplayer
+              id="vid-69d7a4db299a69aeb30006b1"
+              style={{ display: 'block', margin: '0 auto', width: '100%' }}
+            />
+          </div>
+          <Script
+            src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
+            strategy="afterInteractive"
+          />
+        </div>
+
+        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16">
           <a
             href="#planos"
             className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
@@ -102,20 +116,6 @@ export function Hero() {
             Quero entrar para as Musas
             <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm flex-shrink-0">›</span>
           </a>
-        </div>
-
-        {/* VSL — único player, com padding e bordas arredondadas no mobile */}
-        <div className="reveal reveal-d3 mb-10 sm:mb-16">
-          <div className="rounded-2xl overflow-hidden sm:rounded-none">
-            <vturb-smartplayer
-              id="vid-69d7a4db299a69aeb30006b1"
-              style={{ display: 'block', margin: '0 auto', width: '100%' }}
-            />
-          </div>
-          <Script
-            src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
-            strategy="afterInteractive"
-          />
         </div>
 
         {/* Stats */}
