@@ -100,7 +100,7 @@ export function Hero() {
           />
         </div>
 
-        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16">
+        <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16 justify-center">
           <a
             href="#planos"
             className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
