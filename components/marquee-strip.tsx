@@ -14,6 +14,7 @@ export function MarqueeStrip({
     <div
       className="overflow-hidden whitespace-nowrap py-3.5"
       style={{ background: dark ? 'var(--gd)' : 'var(--o)' }}
+      aria-hidden="true"
     >
       <div
         className={`inline-flex ${reverse ? 'marquee-animate-reverse' : 'marquee-animate'}`}

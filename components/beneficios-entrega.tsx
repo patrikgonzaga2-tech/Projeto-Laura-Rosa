@@ -369,6 +369,10 @@ export function Bonus() {
                 src="/images/laura-whatsapp.svg"
                 alt="Laura Rosa — criadora do Método Corpo Feliz"
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width={560}
+                height={280}
               />
             </div>
             {bonusCards.map((card, i) => (

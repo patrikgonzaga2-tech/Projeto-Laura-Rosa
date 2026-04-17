@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -141,9 +140,24 @@ a {
   50%{ transform: translate(-20px,15px) scale(1.1); }
 }
 
-.blob-float1 { animation: float1 14s ease-in-out infinite; }
-.blob-float2 { animation: float2 18s ease-in-out infinite; }
-.blob-float3 { animation: float3 10s ease-in-out infinite; }
+.blob-float1 { animation: float1 14s ease-in-out infinite; contain: layout style; will-change: transform; }
+.blob-float2 { animation: float2 18s ease-in-out infinite; contain: layout style; will-change: transform; }
+.blob-float3 { animation: float3 10s ease-in-out infinite; contain: layout style; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-float1, .blob-float2, .blob-float3 {
+    animation: none;
+    will-change: auto;
+  }
+  .marquee-animate, .marquee-animate-reverse {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* ACC BODY */
 .acc-body-enter {

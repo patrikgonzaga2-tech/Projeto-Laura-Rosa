@@ -154,7 +154,7 @@ function JustifiedGallery({
   const isMobile = width > 0 && width < 768
 
   return (
-    <div ref={containerRef} className="w-full">
+    <div ref={containerRef} className="w-full" style={{ minHeight: width === 0 ? 400 : undefined }}>
       {width === 0 ? null : isMobile ? (
         // Mobile: single column, full width, natural ratio
         <div className="flex flex-col" style={{ gap }}>
@@ -213,6 +213,7 @@ export function SocialProof1() {
     <section
       className="relative overflow-hidden py-20 sm:py-24 lg:py-28"
       style={{ background: 'var(--pale)' }}
+      aria-label="Resultados reais das Musas"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -278,6 +279,7 @@ export function SocialProof2() {
     <section
       className="relative overflow-hidden py-20 sm:py-24 lg:py-28"
       style={{ background: 'var(--gd)' }}
+      aria-label="Comunidade em tempo real"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -307,7 +309,7 @@ export function SocialProof2() {
           </h2>
           <p
             className="mt-4 mx-auto max-w-[480px] leading-relaxed"
-            style={{ fontSize: 16, color: 'rgba(255,255,255,0.5)' }}
+            style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }}
           >
             Não é marketing. É o WhatsApp das Musas — ao vivo, todos os dias.
           </p>

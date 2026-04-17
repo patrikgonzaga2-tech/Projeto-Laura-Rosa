@@ -35,7 +35,8 @@ function MasonryGallery({ imgs, dark }: { imgs: Img[]; dark?: boolean }) {
           <img
             src={img.src}
             alt={img.alt}
-            loading="lazy"
+            loading={i < 2 ? 'eager' : 'lazy'}
+            decoding={i < 2 ? 'sync' : 'async'}
             className="block w-full h-auto"
           />
         </div>
@@ -71,6 +72,7 @@ export function SocialProof1() {
     <section
       className="relative overflow-hidden py-20 sm:py-24 lg:py-28"
       style={{ background: 'var(--pale)' }}
+      aria-label="Resultados reais das Musas"
     >
       <div
         className="absolute inset-0 pointer-events-none"

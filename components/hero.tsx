@@ -10,6 +10,7 @@ export function Hero() {
     <section
       className="relative min-h-svh flex flex-col justify-end overflow-hidden"
       style={{ background: 'var(--gd)' }}
+      aria-label="Seção principal"
     >
       {/* Blobs */}
       <svg
@@ -42,6 +43,10 @@ export function Hero() {
             alt="Comunidade Corpo Feliz"
             className="h-14 sm:h-16 w-auto object-contain"
             style={{ filter: 'brightness(0) invert(1)' }}
+            width={220}
+            height={64}
+            fetchPriority="high"
+            decoding="sync"
           />
         </div>
 
@@ -55,12 +60,8 @@ export function Hero() {
             letterSpacing: '-0.03em',
           }}
         >
-          <span className="hidden sm:inline">Emagreça de<br />
-          verdade. Sem lutar<br />
-          contra{' '}</span>
-          <span className="sm:hidden">Emagreça de<br />
-          verdade.<br />
-          Sem lutar contra<br /></span>
+          {'Emagreça de verdade. Sem lutar contra '}
+          <br className="hidden sm:block" />
           <em
             className="not-italic relative inline-block"
             style={{ color: 'var(--o)' }}
@@ -92,6 +93,8 @@ export function Hero() {
             <vturb-smartplayer
               id="vid-69d7a4db299a69aeb30006b1"
               style={{ display: 'block', margin: '0 auto', width: '100%' }}
+              aria-label="Vídeo de apresentação da Comunidade Corpo Feliz"
+              role="region"
             />
           </div>
           <Script
@@ -103,6 +106,7 @@ export function Hero() {
         <div className="reveal reveal-d3 flex flex-wrap gap-3 mb-10 sm:mb-16 justify-center">
           <a
             href="#planos"
+            aria-label="Quero entrar para as Musas — ver planos"
             className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
             style={{
               fontFamily: 'var(--font-display)',
@@ -151,7 +155,7 @@ export function Hero() {
               >
                 {s.num}
               </div>
-              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', fontWeight: 500, letterSpacing: '0.04em' }}>
+              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: 500, letterSpacing: '0.04em' }}>
                 {s.lbl}
               </div>
             </div>

@@ -69,6 +69,7 @@ export function ComoFunciona() {
     <section
       className="py-20 sm:py-24 lg:py-28 relative overflow-hidden"
       style={{ background: 'var(--pale)' }}
+      aria-label="Como funciona a Comunidade"
     >
       <div className="max-w-[1080px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -117,6 +118,10 @@ export function ComoFunciona() {
                 src="/images/laura.svg"
                 alt="Laura Rosa, criadora do Método Corpo Feliz"
                 className="w-full h-full object-cover object-top"
+                loading="lazy"
+                decoding="async"
+                width={480}
+                height={600}
               />
             </div>
           </div>

@@ -22,6 +22,19 @@ export const metadata: Metadata = {
   title: 'Comunidade Corpo Feliz — Laura Rosa',
   description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.',
   generator: 'v0.app',
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    title: 'Comunidade Corpo Feliz — Laura Rosa',
+    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.',
+    siteName: 'Comunidade Corpo Feliz',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Comunidade Corpo Feliz — Laura Rosa',
+    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios.',
+  },
   icons: {
     icon: [
       {
@@ -48,14 +61,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${bricolage.variable} ${dmSans.variable}`} suppressHydrationWarning>
-      <Script id="gtm" strategy="afterInteractive">{`
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NHRTC9MC');
-      `}</Script>
       <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-body, DM Sans, sans-serif)' }} suppressHydrationWarning>
+        <Script id="gtm" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NHRTC9MC');
+        `}</Script>
         {/* GTM noscript fallback */}
         <noscript>
           <iframe
