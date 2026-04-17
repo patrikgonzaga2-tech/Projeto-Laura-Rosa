@@ -133,7 +133,9 @@ export function Stack() {
               <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>no plano anual · acesso imediato</div>
               <div className="mt-6">
                 <a
-                  href="#planos"
+                  href="https://payfast.greenn.com.br/78187/offer/9nk4U0"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 font-bold rounded-full transition-all duration-300 hover:-translate-y-1"
                   style={{ fontFamily: 'var(--font-display)', fontSize: 16, padding: '17px 36px', background: 'var(--o)', color: '#000', boxShadow: '0 8px 40px rgba(245,113,0,0.35)' }}
                 >
