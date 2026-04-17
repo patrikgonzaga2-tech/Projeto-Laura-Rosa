@@ -4,7 +4,8 @@ import { SocialProof1, SocialProof2 } from '@/components/gallery'
 import { Metodo } from '@/components/metodo'
 import { ComoFunciona } from '@/components/como-funciona'
 import { Beneficios, Entrega, Bonus, Comparacao } from '@/components/beneficios-entrega'
-import { Stack, Planos, Garantia, Faq, CtaFinal, Footer } from '@/components/stack-planos-faq'
+import { Stack, Garantia, Faq, CtaFinal, Footer } from '@/components/stack-planos-faq'
+import { PlanosB } from '@/components/stack-planos-faq-b'
 
 const marqueeItems1 = [
   'Treinos Hormonais',
@@ -41,7 +42,7 @@ export default function PageB() {
       <Bonus />
       <Comparacao />
       <Stack />
-      <Planos />
+      <PlanosB />
       <Garantia />
       <Faq />
       <CtaFinal />
