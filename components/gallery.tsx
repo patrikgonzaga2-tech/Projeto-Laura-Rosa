@@ -20,10 +20,7 @@ const imgs2: Img[] = [
 function MasonryGallery({ imgs, dark }: { imgs: Img[]; dark?: boolean }) {
   return (
     <div
-      style={{
-        columnCount: 3,
-        columnGap: 10,
-      }}
+      style={{ columnGap: 10 }}
       className="[column-count:1] sm:[column-count:2] lg:[column-count:3]"
     >
       {imgs.map((img, i) => (
