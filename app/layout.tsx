@@ -19,20 +19,20 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Comunidade Corpo Feliz — Laura Rosa',
-  description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.',
+  title: 'Comunidade Corpo Feliz — Laüra Rosa',
+  description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laüra do seu lado todo dia.',
   generator: 'v0.app',
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    title: 'Comunidade Corpo Feliz — Laura Rosa',
-    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laura do seu lado todo dia.',
+    title: 'Comunidade Corpo Feliz — Laüra Rosa',
+    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laüra do seu lado todo dia.',
     siteName: 'Comunidade Corpo Feliz',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Comunidade Corpo Feliz — Laura Rosa',
+    title: 'Comunidade Corpo Feliz — Laüra Rosa',
     description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios.',
   },
   icons: {

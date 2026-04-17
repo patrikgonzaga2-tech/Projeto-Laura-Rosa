@@ -299,7 +299,7 @@ export function Entrega() {
 export function Bonus() {
   const bonusCards = [
     {
-      title: 'WhatsApp diário com a Laura',
+      title: 'WhatsApp diário com a Laüra',
       desc: 'A criadora do método presente todos os dias — inclusive fim de semana.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%">
@@ -354,7 +354,7 @@ export function Bonus() {
                 letterSpacing: '-0.02em',
               }}
             >
-              A Laura<br />
+              A Laüra<br />
               no WhatsApp.<br />
               Todo dia.
             </h2>
@@ -367,7 +367,7 @@ export function Bonus() {
             <div className="rounded-2xl overflow-hidden w-full mb-1">
               <img
                 src="/images/laura-whatsapp.svg"
-                alt="Laura Rosa — criadora do Método Corpo Feliz"
+                alt="Laüra Rosa — criadora do Método Corpo Feliz"
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"

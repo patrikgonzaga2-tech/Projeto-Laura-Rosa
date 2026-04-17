@@ -27,7 +27,7 @@ const stackCats = [
     rows: [
       { nome: '4 E-books + Encontros ao Vivo gravados', val: 'R$385' },
       { nome: 'Suporte com a Profe Laüra Rosa todo dia + Comunidade das Musas', val: 'Incalculável' },
-      { nome: 'A Laura no WhatsApp todos os dias', val: 'Incalculável' },
+      { nome: 'A Laüra no WhatsApp todos os dias', val: 'Incalculável' },
     ],
   },
 ]
@@ -94,11 +94,11 @@ const faqs = [
   },
   {
     q: 'Como funciona o acompanhamento no WhatsApp?',
-    a: 'É um grupo exclusivo para as Musas com a Laura presente todos os dias — inclusive fim de semana. Não é suporte de equipe. É acompanhamento diário real com a criadora do método.',
+    a: 'É um grupo exclusivo para as Musas com a Laüra presente todos os dias — inclusive fim de semana. Não é suporte de equipe. É acompanhamento diário real com a criadora do método.',
   },
   {
     q: 'Tenho acesso a tudo assim que entrar?',
-    a: 'Sim. Assim que o pagamento é confirmado, o acesso à plataforma é imediato — todas as trilhas, desafios, planos alimentares, e-books, módulo LPF, encontros gravados e o grupo de WhatsApp com a Laura.',
+    a: 'Sim. Assim que o pagamento é confirmado, o acesso à plataforma é imediato — todas as trilhas, desafios, planos alimentares, e-books, módulo LPF, encontros gravados e o grupo de WhatsApp com a Laüra.',
   },
 ]
 
@@ -312,7 +312,7 @@ export function Garantia() {
               São 30 dias — não 7 como a maioria — porque em 30 dias de Treinos Hormonais já dá para sentir a diferença.
             </p>
             <div className="italic font-bold pt-4" style={{ fontSize: 15, color: 'var(--gd)', borderTop: '2px dashed rgba(28,135,60,0.2)' }}>
-              O risco é nosso. A transformação é sua. — Laura Rosa
+              O risco é nosso. A transformação é sua. — Laüra Rosa
             </div>
           </div>
         </div>

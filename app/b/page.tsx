@@ -14,7 +14,7 @@ const marqueeItems1 = [
   'Queima Sustentável',
   'Manutenção e Estilo de Vida',
   'Comunidade das Musas',
-  'Laura Rosa Personal',
+  'Laüra Rosa Personal',
   'Corpo Feliz',
 ]
 
@@ -24,7 +24,7 @@ const marqueeItems2 = [
   'Acompanhamento diário real',
   'Em casa · 15 minutos',
   'Treinos que respeitam o ciclo',
-  'Laura no WhatsApp todo dia',
+  'Laüra no WhatsApp todo dia',
 ]
 
 export default function PageB() {

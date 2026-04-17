@@ -116,7 +116,7 @@ export function ComoFunciona() {
             <div className="reveal reveal-d1 rounded-3xl overflow-hidden w-full" style={{ aspectRatio: '4/5' }}>
               <img
                 src="/images/laura.svg"
-                alt="Laura Rosa, criadora do Método Corpo Feliz"
+                alt="Laüra Rosa, criadora do Método Corpo Feliz"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
                 decoding="async"
