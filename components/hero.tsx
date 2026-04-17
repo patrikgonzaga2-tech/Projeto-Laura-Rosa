@@ -104,12 +104,14 @@ export function Hero() {
           </a>
         </div>
 
-        {/* VSL — único player, full-width no mobile, contido no desktop */}
-        <div className="reveal reveal-d3 mb-10 sm:mb-16 -mx-5 sm:mx-0 w-screen sm:w-full">
-          <vturb-smartplayer
-            id="vid-69d7a4db299a69aeb30006b1"
-            style={{ display: 'block', margin: '0 auto', width: '100%' }}
-          />
+        {/* VSL — único player, com padding e bordas arredondadas no mobile */}
+        <div className="reveal reveal-d3 mb-10 sm:mb-16">
+          <div className="rounded-2xl overflow-hidden sm:rounded-none">
+            <vturb-smartplayer
+              id="vid-69d7a4db299a69aeb30006b1"
+              style={{ display: 'block', margin: '0 auto', width: '100%' }}
+            />
+          </div>
           <Script
             src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
             strategy="afterInteractive"
