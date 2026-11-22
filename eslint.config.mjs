@@ -78,7 +78,7 @@ export default defineConfig([
         { max: 150, skipBlankLines: true, skipComments: true },
       ],
       "max-nested-callbacks": ["warn", 3],
-      "quality/max-lines": ["warn", { max: 350 }], // baseline 22/11/2026: 4 violações
+      "quality/max-lines": ["warn", { max: 350 }], // baseline 22/11/2026: 3 violações
       "quality/no-direct-console": [
         "error",
         { logger: "um logger do projeto" },
