@@ -60,7 +60,7 @@ export default defineConfig([
       "no-empty": ["error", { allowEmptyCatch: true }],
       "no-var": "error",
       "prefer-const": "error",
-      // baseline 22/11/2026: 5 violações
+      // baseline 22/11/2026: 2 violações (as 2 em stack-planos-faq-b.tsx, arquivo de pagamento: só com OK do Patrik)
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },

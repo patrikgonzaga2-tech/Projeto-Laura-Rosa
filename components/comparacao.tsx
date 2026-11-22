@@ -17,8 +17,6 @@ function Sym({ val }: { val: boolean | string }) {
   return <span className="text-xs font-bold" style={{ color: 'var(--o)' }}>{val === 'dep' ? 'Depende' : 'Separado'}</span>
 }
 
-const competitors = ['Corpo Feliz', 'Academia', 'Outros Apps', 'Personal', 'Grátis']
-
 export function Comparacao() {
   return (
     <section className="py-20 sm:py-24 lg:py-28" style={{ background: 'var(--pale)' }}>
