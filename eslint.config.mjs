@@ -60,7 +60,7 @@ export default defineConfig([
       "no-empty": ["error", { allowEmptyCatch: true }],
       "no-var": "error",
       "prefer-const": "error",
-      // baseline 21/11/2026: 5 violações
+      // baseline 22/11/2026: 5 violações
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
@@ -68,17 +68,17 @@ export default defineConfig([
       // The size and complexity budget is all "warn" on purpose. These
       // numbers are a conversation starter about factoring, not a gate --
       // promote one to "error" once the count for it reaches zero.
-      complexity: ["warn", 12], // baseline 21/11/2026: 4 violações
+      complexity: ["warn", 12], // baseline 22/11/2026: 4 violações
       "max-depth": ["warn", 4],
       "max-statements": ["warn", 20],
       "max-params": ["warn", 4],
-      // baseline 21/11/2026: 3 violações
+      // baseline 22/11/2026: 3 violações
       "max-lines-per-function": [
         "warn",
         { max: 150, skipBlankLines: true, skipComments: true },
       ],
       "max-nested-callbacks": ["warn", 3],
-      "quality/max-lines": ["warn", { max: 350 }], // baseline 21/11/2026: 4 violações
+      "quality/max-lines": ["warn", { max: 350 }], // baseline 22/11/2026: 4 violações
       "quality/no-direct-console": [
         "error",
         { logger: "um logger do projeto" },
